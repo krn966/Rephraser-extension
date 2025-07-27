@@ -1,15 +1,37 @@
 {
-  "name": "rephraser-backend",
+  "name": "rephraser-extension",
   "version": "1.0.0",
-  "description": "Backend for Gemini Rephraser extension",
+  "description": "Gemini Rephraser Browser Extension - AI-powered text rephrasing for Chrome and Firefox",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "cd backend && npm start",
+    "type": "module",
+    "dev": "cd backend && npm run dev",
+    "build:chrome": "node scripts/build-chrome.js",
+    "build:firefox": "node scripts/build-firefox.js",
+    "package": "node scripts/package-extensions.js",
+    "install:backend": "cd backend && npm install",
+    "setup": "npm run install:backend && echo 'Please copy backend/env.example to backend/.env and add your GEMINI_API_KEY'"
   },
-  "dependencies": {
-    "dotenv": "^17.2.1",
-    "express": "^4.18.2",
-    "marked": "^16.1.1",
-    "node-fetch": "^2.6.7"
+  "keywords": [
+    "browser-extension",
+    "chrome-extension",
+    "firefox-extension",
+    "gemini",
+    "ai",
+    "rephrase",
+    "text-processing"
+  ],
+  "author": "Rephraser Extension Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/rephraser-extension.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "archiver": "^5.3.1"
   }
 }

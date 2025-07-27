@@ -1,0 +1,11 @@
+# Dependencies
+backend/node_modules
+extensions/chrome/node_modules
+extensions/firefox/node_modules
+
+# Environment file
+backend/.env
+
+# Optional
+.DS_Store
+.CLEANUP.md
